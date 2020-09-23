@@ -1,0 +1,280 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/level_3.gd" type="Script" id=2]
+[ext_resource path="res://Level parts/spawn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=4]
+[ext_resource path="res://soundmaker/soundmaker.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Level parts/air_spawn.tscn" type="PackedScene" id=7]
+
+[sub_resource type="TileSet" id=1]
+resource_local_to_scene = true
+0/name = "industrial.v2.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 32, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "industrial.v2.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 176, 112, 96, 96 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 1
+1/autotile/bitmask_flags = [ Vector2( 0, 1 ), 176, Vector2( 0, 2 ), 50, Vector2( 1, 1 ), 58, Vector2( 1, 2 ), 184, Vector2( 2, 0 ), 152, Vector2( 2, 1 ), 26, Vector2( 2, 2 ), 56, Vector2( 3, 0 ), 186, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 154, Vector2( 3, 3 ), 178, Vector2( 3, 4 ), 146, Vector2( 3, 5 ), 18, Vector2( 4, 1 ), 56, Vector2( 4, 2 ), 146, Vector2( 4, 3 ), 146, Vector2( 4, 4 ), 146, Vector2( 5, 0 ), 146 ]
+1/autotile/icon_coordinate = Vector2( 1, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "industrial.v2.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 192, 64, 64, 48 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 1
+2/autotile/bitmask_flags = [ Vector2( 0, 0 ), 176, Vector2( 0, 1 ), 178, Vector2( 0, 2 ), 50, Vector2( 1, 0 ), 56, Vector2( 1, 1 ), 184, Vector2( 1, 2 ), 58, Vector2( 2, 0 ), 56, Vector2( 2, 1 ), 154, Vector2( 2, 2 ), 26, Vector2( 3, 0 ), 152, Vector2( 3, 1 ), 146 ]
+2/autotile/icon_coordinate = Vector2( 3, 1 )
+2/autotile/tile_size = Vector2( 16, 16 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "industrial.v2.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 32, 64, 48 )
+3/tile_mode = 1
+3/autotile/bitmask_mode = 1
+3/autotile/bitmask_flags = [ Vector2( 0, 0 ), 176, Vector2( 0, 1 ), 146, Vector2( 0, 2 ), 50, Vector2( 1, 0 ), 56, Vector2( 1, 1 ), 178, Vector2( 1, 2 ), 56, Vector2( 2, 0 ), 58, Vector2( 2, 1 ), 184, Vector2( 2, 2 ), 26, Vector2( 3, 0 ), 152, Vector2( 3, 1 ), 154, Vector2( 3, 2 ), 511 ]
+3/autotile/icon_coordinate = Vector2( 1, 0 )
+3/autotile/tile_size = Vector2( 16, 16 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "industrial.v2.png 4"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 80, 208, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "industrial.v2.png 5"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 192, 0, 64, 16 )
+5/tile_mode = 1
+5/autotile/bitmask_mode = 1
+5/autotile/bitmask_flags = [ Vector2( 0, 0 ), 48, Vector2( 1, 0 ), 56, Vector2( 2, 0 ), 24, Vector2( 3, 0 ), 325 ]
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 16, 16 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "industrial.v2.png 6"
+6/texture = ExtResource( 4 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 352, 32, 32, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "industrial.v2.png 7"
+7/texture = ExtResource( 4 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 80, 208, 16, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+
+[node name="level_3" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+position = Vector2( -80, -60 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -80, -60 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 524318, 1, 65536, 524319, 1, 131074, 524320, 1, 131074, 524321, 1, 65540, 524322, 1, 131073, 524323, 1, 65540, 524324, 1, 65540, 524325, 1, 65540, 524326, 1, 2, 589833, 5, 0, 589834, 5, 0, 589835, 5, 1, 589836, 5, 1, 589837, 5, 0, 589854, 1, 262147, 589858, 1, 262147, 589862, 1, 131076, 655369, 5, 0, 655370, 5, 0, 655371, 4, 0, 655373, 5, 0, 655390, 1, 196611, 655391, 1, 65540, 655392, 1, 131074, 655393, 1, 131074, 655394, 1, 3, 655395, 1, 131074, 655396, 1, 131074, 655397, 1, 131074, 655398, 1, 131075, 720905, 5, 0, 720906, 5, 0, 720909, 5, 0, 720926, 1, 131076, 720930, 1, 262147, 720934, 1, 5, 786441, 5, 0, 786442, 5, 0, 786443, 5, 0, 786444, 5, 0, 786445, 5, 0, 786462, 1, 196612, 786466, 1, 65539, 786470, 1, 262147, 851977, 5, 0, 851978, 5, 0, 851979, 5, 0, 851980, 5, 0, 851981, 5, 0, 851998, 1, 196611, 851999, 1, 131074, 852000, 1, 131074, 852001, 1, 65540, 852002, 1, 3, 852003, 1, 65540, 852004, 1, 131074, 852005, 1, 131074, 852006, 1, 131075, 917513, 5, 0, 917514, 5, 0, 917515, 5, 0, 917516, 5, 0, 917517, 5, 0, 917534, 1, 65539, 917538, 1, 5, 917542, 1, 65539, 983049, 5, 0, 983050, 5, 0, 983051, 5, 0, 983052, 5, 0, 983053, 5, 0, 983070, 1, 196612, 983074, 1, 262148, 983078, 1, 196612, 1048585, 5, 0, 1048586, 5, 0, 1048587, 5, 0, 1048588, 5, 0, 1048589, 5, 0, 1048606, 1, 196611, 1048607, 1, 131074, 1048608, 1, 131074, 1048609, 1, 131074, 1048610, 1, 3, 1048611, 1, 131074, 1048612, 1, 131074, 1048613, 1, 65540, 1048614, 1, 131075, 1114121, 5, 0, 1114122, 5, 0, 1114123, 5, 0, 1114124, 5, 0, 1114125, 5, 0, 1114142, 1, 65539, 1114146, 1, 262148, 1114150, 1, 65539, 1179657, 5, 0, 1179658, 5, 0, 1179659, 5, 0, 1179660, 5, 0, 1179661, 5, 0, 1179678, 1, 262148, 1179682, 1, 262148, 1179686, 1, 65539, 1245193, 5, 0, 1245194, 5, 0, 1245195, 5, 0, 1245196, 5, 0, 1245197, 5, 0, 1245214, 1, 196611, 1245215, 1, 131074, 1245216, 1, 131074, 1245217, 1, 65540, 1245218, 1, 3, 1245219, 1, 131074, 1245220, 1, 131074, 1245221, 1, 131074, 1245222, 1, 131075, 1310729, 5, 0, 1310730, 5, 0, 1310731, 5, 0, 1310732, 5, 0, 1310733, 5, 0, 1310750, 1, 196612, 1310754, 1, 262148, 1310758, 1, 262148, 1376265, 5, 0, 1376266, 5, 0, 1376267, 5, 0, 1376268, 5, 0, 1376269, 5, 0, 1376286, 1, 65539, 1376290, 1, 262148, 1376294, 1, 131076, 1441801, 5, 0, 1441802, 5, 0, 1441803, 5, 0, 1441804, 5, 0, 1441805, 5, 0, 1441822, 1, 196611, 1441823, 1, 131074, 1441824, 1, 65540, 1441825, 1, 131074, 1441826, 1, 3, 1441827, 1, 65540, 1441828, 1, 131074, 1441829, 1, 65540, 1441830, 1, 131075, 1507337, 5, 0, 1507338, 5, 0, 1507339, 5, 0, 1507340, 5, 0, 1507341, 5, 0, 1507358, 1, 5, 1507362, 1, 196612, 1507366, 1, 196612, 1572873, 5, 0, 1572874, 5, 0, 1572875, 4, 0, 1572877, 5, 0, 1572894, 1, 327683, 1572898, 1, 327683, 1572902, 1, 327683, 1638409, 5, 0, 1638410, 5, 0, 1638413, 5, 0, 1638430, 5, 0, 1638431, 5, 0, 1638432, 5, 0, 1638433, 5, 0, 1638434, 5, 0, 1638435, 5, 0, 1638436, 5, 1, 1638437, 5, 1, 1638438, 5, 0, 1703945, 5, 0, 1703946, 5, 0, 1703947, 5, 1, 1703948, 5, 1, 1703949, 5, 0, 1703966, 5, 0, 1703967, 5, 0, 1703968, 5, 0, 1703969, 5, 0, 1703970, 5, 0, 1703971, 5, 0, 1703972, 4, 0, 1703974, 5, 0, 1769502, 5, 0, 1769503, 5, 0, 1769504, 5, 0, 1769505, 5, 0, 1769506, 5, 0, 1769507, 5, 0, 1769510, 5, 0, 1835038, 5, 0, 1835039, 5, 0, 1835040, 5, 0, 1835041, 5, 0, 1835042, 5, 0, 1835043, 5, 0, 1835044, 5, 0, 1835045, 5, 0, 1835046, 5, 0, 1900574, 5, 0, 1900575, 5, 0, 1900576, 5, 0, 1900577, 5, 0, 1900578, 5, 0, 1900579, 5, 0, 1900580, 5, 0, 1900581, 5, 0, 1900582, 5, 0 )
+
+[node name="cam" type="Camera2D" parent="."]
+position = Vector2( 320, 240 )
+current = true
+zoom = Vector2( 0.4, 0.4 )
+
+[node name="air_spawn_1" parent="cam" instance=ExtResource( 7 )]
+position = Vector2( -408, -16 )
+
+[node name="air_spawn_2" parent="cam" instance=ExtResource( 7 )]
+position = Vector2( -408, -184 )
+
+[node name="soundmaker" parent="cam" instance=ExtResource( 5 )]
+position = Vector2( -4, 20 )
+
+[node name="spawn_1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 372 )
+
+[node name="spawn_2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 112, 340 )
+
+[node name="spawn_3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 112, 116 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 443.266, 377.262 )
+
+[node name="Walls" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 480, 136 )
+collision_layer = 8
+collision_mask = 5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( -80, -60 )
+polygon = PoolVector2Array( 140, -4, 144, 344, 0, 344, 4, 8, -256, 8, -256, 296, -336, 296, -336, 196, -336, 180, -336, 92, -336, 8, -256, 8, -336, -80, -400, -80, -404, 416, 248, 416, 248, -80, -336, -80, -256, 8, 4, 8, 4, -4 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Walls"]
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 0, 48 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 0, 96 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 64, 96 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 64, 48 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 64, 0 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 64, -48 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 0, -48 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 64, -68, 64 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 0, -80 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 48, -68, 48 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 64, -80 )
+polygon = PoolVector2Array( -68, 24, -12, 24, -12, 48, -68, 48 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 64, 156 )
+polygon = PoolVector2Array( -68, 12, -12, 12, -12, 48, -68, 48 )
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Walls"]
+position = Vector2( 0, 156 )
+polygon = PoolVector2Array( -68, 12, -12, 12, -12, 48, -68, 48 )
+
+[node name="Spawn" type="Timer" parent="."]
+autostart = true
+
+[node name="waiting" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 196.0
+margin_top = 16.0
+margin_right = 414.0
+margin_bottom = 30.0
+text = "Press ESC to Go Back to the Level Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Spawn" to="." method="_on_Spawn_timeout"]
+[connection signal="timeout" from="waiting" to="." method="_on_waiting_timeout"]

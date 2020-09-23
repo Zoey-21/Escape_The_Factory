@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/end_portal.gd" type="Script" id=2]
+
+[node name="end_portal" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="on" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 131, 179, 26, 26 )
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+collision_mask = 65
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -0.120148, -12.5528, 12.503, -0.390358, 0.340553, 12.6014, -12.5591, -0.113937 )
+disabled = true
+[connection signal="body_entered" from="StaticBody2D" to="." method="_on_StaticBody2D_body_entered"]

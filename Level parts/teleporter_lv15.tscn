@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/teleporter_Lv15.gd" type="Script" id=2]
+
+
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/industrial.v2.png-7f6ebbb7645cfccd264a6e2f34d81c26.stex"
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="teleporter_1" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="base" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 79, 207, 34, 34 )
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+collision_mask = 65
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -0.0440178, -12.5192, 12.504, -0.00430679, -0.0440273, 12.6761, -12.8569, -0.13674 )
+disabled = true
+
+[node name="spawn_light" type="Sprite" parent="."]
+position = Vector2( -0.0135133, -0.11009 )
+scale = Vector2( 1.00828, 1.01503 )
+texture = SubResource( 1 )
+vframes = 2
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 128, 176, 64, 64 )
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="StaticBody2D" to="." method="_on_StaticBody2D_body_entered"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shot_explotion.wav-6ef05a9d2992888204057cbd2c945045.sample"
+
+[deps]
+
+source_file="res://Resorces/Sounds/shot_explotion.wav"
+dest_files=[ "res://.import/shot_explotion.wav-6ef05a9d2992888204057cbd2c945045.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

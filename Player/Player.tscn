@@ -1,0 +1,129 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://scripts/bullet spawn.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 256, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 256, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 256, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 288, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 288, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 288, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 288, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 80, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 272, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 112, 272, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": false,
+"name": "dash",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "running",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 2.52227, 1.99805 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 4.52769, 6.52395 )
+
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+"walk",
+]]
+collision_layer = 64
+collision_mask = 8
+script = ExtResource( 2 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 16 )
+animation = "running"
+frame = 5
+playing = true
+
+[node name="walk_collision" type="CollisionShape2D" parent="." groups=[
+"walk",
+]]
+position = Vector2( -0.664333, 5.93427 )
+shape = SubResource( 17 )
+
+[node name="hit_box" type="Area2D" parent="."]
+position = Vector2( -0.568966, 1.48806 )
+collision_mask = 6
+
+[node name="hit_box" type="CollisionShape2D" parent="hit_box"]
+shape = SubResource( 18 )
+
+[node name="bullet spawn" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bullet spawn"]
+position = Vector2( -0.533043, -4.04447 )
+shape = SubResource( 17 )
+disabled = true
+
+[node name="invin_timer" type="Timer" parent="."]
+wait_time = 3.0
+[connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]
+[connection signal="timeout" from="invin_timer" to="." method="_on_invin_timer_timeout"]

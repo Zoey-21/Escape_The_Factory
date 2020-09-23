@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ene_spawn.wav-158a53782b6153db791122ffc539ee39.sample"
+
+[deps]
+
+source_file="res://Resorces/Sounds/ene_spawn.wav"
+dest_files=[ "res://.import/ene_spawn.wav-158a53782b6153db791122ffc539ee39.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shot_despawn.wav-62cd14b7eb807ecde17c3924c35e31ac.sample"
+
+[deps]
+
+source_file="res://Resorces/Sounds/shot_despawn.wav"
+dest_files=[ "res://.import/shot_despawn.wav-62cd14b7eb807ecde17c3924c35e31ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

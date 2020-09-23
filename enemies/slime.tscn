@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="slime" type="CPUParticles2D"]
+amount = 4
+preprocess = 1.0
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 3, 3 )
+gravity = Vector2( 0, 4 )
+angular_velocity = 232.26
+angular_velocity_random = 0.25
+linear_accel = 2.15
+angle_random = 0.42
+scale_amount = 4.0
+scale_amount_random = 0.8
+color = Color( 0.470588, 0.52549, 0.694118, 1 )

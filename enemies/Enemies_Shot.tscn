@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends RigidBody2D
+
+var explution = preload(\"res://explotion/Explotion.tscn\")# loads explution
+
+func _physics_process(delta):
+	if $\"/root/Global\".level_ended ==true:#if level has ended 
+		var explution_instance = explution.instance() #make explotion instance
+		explution_instance.position = get_global_position() #get location of hit
+		get_tree().get_root().add_child(explution_instance)#load explution
+		$\"/root/Global\".shotdespawn.play()# play despawn sownd
+		queue_free()#remove
+	
+	if  !get_node(\"notifier\").is_on_screen():#if not on screen
+		queue_free()#remove
+
+func _on_Player_Shot_body_entered(body):
+	if body.is_in_group(\"player\"): #if hitting player
+		var explution_instance = explution.instance() #make explotion instance
+		explution_instance.position = get_global_position() #get location of hit
+		get_tree().get_root().add_child(explution_instance) #show explotion
+		queue_free() #deleate bullet
+"
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 7.04087
+
+[node name="Enemies_Shot" type="RigidBody2D" groups=[
+"ene_shot",
+]]
+collision_layer = 16
+collision_mask = 3
+gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
+script = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="sprite" type="Sprite" parent="."]
+rotation = 1.5708
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208.798, 256.629, 14.6504, 14.6504 )
+
+[node name="notifier" type="VisibilityNotifier2D" parent="."]
+[connection signal="body_entered" from="." to="." method="_on_Player_Shot_body_entered"]

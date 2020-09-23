@@ -1,0 +1,406 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://soundmaker/soundmaker.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Menus/level_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=4]
+[ext_resource path="res://back_butten.tscn" type="PackedScene" id=5]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+onready var levels_beaten = get_node(\"/root/LevelsBeaten\")
+onready var two = get_node(\"buttens/2\")
+onready var three = get_node(\"buttens/3\")
+onready var four = get_node(\"buttens/4\")
+onready var five = get_node(\"buttens/5\")
+onready var six = get_node(\"buttens/6\")
+onready var seven = get_node(\"buttens/7\")
+onready var eight = get_node(\"buttens/8\")
+onready var nine = get_node(\"buttens/9\")
+onready var ten = get_node(\"buttens/10\")
+onready var eleven = get_node(\"buttens/11\")
+onready var twelve = get_node(\"buttens/12\")
+onready var thirteen = get_node(\"buttens/13\")
+onready var fourteen = get_node(\"buttens/14\")
+onready var fifteen = get_node(\"buttens/15\")
+onready var sixteen = get_node(\"buttens/16\")
+
+onready var map_2 = get_node(\"Map_Part_2\")
+onready var map_3 = get_node(\"Map_Part_3\")
+
+
+
+func _physics_process(_delta):
+
+	if is_in_group(\"enemy\"):
+		queue_free()
+	if is_in_group(\"Player\"):
+		queue_free()
+	if is_in_group(\"ene_shot\"):
+		queue_free()
+
+	if levels_beaten.level_data[\"level_1\"] == \"true\":
+		two.set_visible(true)
+	if levels_beaten.level_data[\"level_2\"] == \"true\":
+		three.set_visible(true)
+	if levels_beaten.level_data[\"level_3\"] == \"true\":
+		four.set_visible(true)
+	if levels_beaten.level_data[\"level_4\"] == \"true\":
+		five.set_visible(true)
+	if levels_beaten.level_data[\"level_5\"] == \"true\":
+		six.set_visible(true)
+		map_2.set_visible(true)
+	if levels_beaten.level_data[\"level_6\"] == \"true\":
+		seven.set_visible(true)
+	if levels_beaten.level_data[\"level_7\"] == \"true\":
+		eight.set_visible(true)
+	if levels_beaten.level_data[\"level_8\"] == \"true\":
+		nine.set_visible(true)
+	if levels_beaten.level_data[\"level_9\"] == \"true\":
+		ten.set_visible(true)
+	if levels_beaten.level_data[\"level_10\"] == \"true\":
+		eleven .set_visible(true)
+		map_3.set_visible(true)
+	if levels_beaten.level_data[\"level_11\"] == \"true\":
+		twelve.set_visible(true)
+	if levels_beaten.level_data[\"level_12\"] == \"true\":
+		thirteen.set_visible(true)
+	if levels_beaten.level_data[\"level_13\"] == \"true\":
+		fourteen.set_visible(true)
+	if levels_beaten.level_data[\"level_14\"] == \"true\":
+		fifteen.set_visible(true)
+	if levels_beaten.level_data[\"level_15\"] == \"true\":
+		sixteen.set_visible(true)
+		
+
+func _on_Button_pressed():
+# warning-ignore:return_value_discarded
+	get_tree().change_scene(\"res://Menus/Main_Menu.tscn\")
+"
+
+[sub_resource type="TileSet" id=2]
+0/name = "industrial.v2.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 32, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "industrial.v2.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 176, 112, 96, 96 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 1
+1/autotile/bitmask_flags = [ Vector2( 0, 1 ), 176, Vector2( 0, 2 ), 50, Vector2( 1, 0 ), 56, Vector2( 1, 1 ), 58, Vector2( 1, 2 ), 184, Vector2( 2, 0 ), 152, Vector2( 2, 1 ), 26, Vector2( 2, 2 ), 56, Vector2( 3, 0 ), 186, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 154, Vector2( 3, 3 ), 178, Vector2( 3, 4 ), 146, Vector2( 3, 5 ), 18, Vector2( 4, 1 ), 56, Vector2( 4, 2 ), 146, Vector2( 4, 3 ), 146, Vector2( 4, 4 ), 146, Vector2( 5, 0 ), 146, Vector2( 5, 1 ), 24 ]
+1/autotile/icon_coordinate = Vector2( 3, 4 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "industrial.v2.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 192, 64, 64, 48 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 1
+2/autotile/bitmask_flags = [ Vector2( 0, 0 ), 176, Vector2( 0, 1 ), 178, Vector2( 0, 2 ), 50, Vector2( 1, 0 ), 56, Vector2( 1, 1 ), 184, Vector2( 1, 2 ), 58, Vector2( 2, 0 ), 56, Vector2( 2, 1 ), 154, Vector2( 2, 2 ), 26, Vector2( 3, 0 ), 152, Vector2( 3, 1 ), 146 ]
+2/autotile/icon_coordinate = Vector2( 3, 1 )
+2/autotile/tile_size = Vector2( 16, 16 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "industrial.v2.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 32, 64, 48 )
+3/tile_mode = 1
+3/autotile/bitmask_mode = 1
+3/autotile/bitmask_flags = [ Vector2( 0, 0 ), 176, Vector2( 0, 1 ), 146, Vector2( 0, 2 ), 50, Vector2( 1, 0 ), 56, Vector2( 1, 1 ), 178, Vector2( 1, 2 ), 56, Vector2( 2, 0 ), 58, Vector2( 2, 1 ), 184, Vector2( 2, 2 ), 26, Vector2( 3, 0 ), 152, Vector2( 3, 1 ), 154, Vector2( 3, 2 ), 511 ]
+3/autotile/icon_coordinate = Vector2( 0, 1 )
+3/autotile/tile_size = Vector2( 16, 16 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "industrial.v2.png 4"
+4/texture = ExtResource( 4 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 80, 208, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "industrial.v2.png 5"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 192, 0, 64, 16 )
+5/tile_mode = 1
+5/autotile/bitmask_mode = 1
+5/autotile/bitmask_flags = [ Vector2( 0, 0 ), 48, Vector2( 1, 0 ), 56, Vector2( 2, 0 ), 24, Vector2( 3, 0 ), 325 ]
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 16, 16 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "industrial.v2.png 6"
+6/texture = ExtResource( 4 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 352, 32, 32, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Map_Part_1" type="TileMap" parent="."]
+position = Vector2( -4, -128 )
+scale = Vector2( 2.5, 2.5 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 393224, 2, 65539, 393225, 2, 2, 393226, 2, 1, 393227, 2, 2, 393228, 2, 1, 393229, 2, 2, 393230, 2, 1, 393231, 2, 3, 393243, 2, 0, 393244, 2, 2, 393245, 2, 1, 393246, 2, 3, 458767, 2, 65539, 458779, 2, 65539, 458782, 2, 131072, 458783, 2, 3, 524303, 2, 65539, 524305, 2, 0, 524306, 2, 2, 524307, 2, 2, 524308, 2, 2, 524309, 2, 2, 524310, 2, 2, 524311, 2, 3, 524315, 2, 65539, 524319, 2, 131072, 524320, 2, 3, 589839, 2, 65539, 589841, 2, 65539, 589847, 2, 65539, 589851, 2, 65539, 589856, 2, 65539, 655375, 2, 65539, 655377, 2, 65539, 655383, 2, 131072, 655384, 2, 3, 655386, 2, 0, 655387, 2, 131074, 655392, 2, 131072, 655393, 2, 1, 655394, 2, 1, 655395, 2, 1, 655396, 2, 1, 655397, 2, 2, 655398, 2, 1, 655399, 2, 2, 655400, 2, 1, 655401, 2, 3, 720911, 2, 131072, 720912, 2, 1, 720913, 2, 131074, 720920, 2, 131072, 720921, 2, 1, 720922, 2, 131074, 720937, 2, 131072, 720938, 2, 3, 786474, 2, 65539, 852010, 2, 65539 )
+
+[node name="Map_Part_2" type="TileMap" parent="."]
+visible = false
+position = Vector2( -3.60004, -130.83 )
+scale = Vector2( 2.5, 2.5 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 917520, 3, 0, 917521, 3, 1, 917522, 3, 131073, 917523, 3, 131073, 917524, 3, 1, 917525, 3, 3, 917531, 3, 0, 917532, 3, 131073, 917533, 3, 1, 917534, 3, 1, 917535, 3, 3, 917546, 3, 65536, 983054, 3, 0, 983055, 3, 131073, 983056, 3, 131074, 983061, 3, 131072, 983062, 3, 3, 983067, 3, 65536, 983071, 3, 65536, 983075, 3, 0, 983076, 3, 131073, 983077, 3, 1, 983078, 3, 131073, 983079, 3, 3, 983082, 3, 65536, 1048588, 3, 0, 1048589, 3, 131073, 1048590, 3, 131074, 1048598, 3, 65536, 1048602, 3, 0, 1048603, 3, 131074, 1048607, 3, 131072, 1048608, 3, 3, 1048610, 3, 0, 1048611, 3, 131074, 1048615, 3, 131072, 1048616, 3, 3, 1048618, 3, 65536, 1114122, 3, 0, 1114123, 3, 131073, 1114124, 3, 131074, 1114134, 3, 131072, 1114135, 3, 131073, 1114136, 3, 1, 1114137, 3, 1, 1114138, 3, 131074, 1114144, 3, 131072, 1114145, 3, 1, 1114146, 3, 131074, 1114152, 3, 131072, 1114153, 3, 131073, 1114154, 3, 131074, 1179658, 3, 65536, 1245194, 3, 65536, 1310730, 3, 65536 )
+
+[node name="Map_Part_3" type="TileMap" parent="."]
+visible = false
+position = Vector2( -3.60004, -130.83 )
+scale = Vector2( 2.5, 2.5 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1310730, 1, 262147, 1376266, 1, 262147, 1376286, 1, 65536, 1376287, 1, 65540, 1376288, 1, 65540, 1376289, 1, 65540, 1376290, 1, 1, 1376291, 1, 2, 1441802, 1, 131072, 1441803, 1, 1, 1441804, 1, 1, 1441805, 1, 65541, 1441807, 1, 1, 1441808, 1, 2, 1441812, 1, 65536, 1441813, 1, 65540, 1441814, 1, 65540, 1441815, 1, 131074, 1441816, 1, 2, 1441822, 1, 262147, 1441827, 1, 65539, 1507344, 1, 131076, 1507348, 1, 262148, 1507352, 1, 131076, 1507358, 1, 65539, 1507363, 1, 5, 1572880, 1, 262147, 1572884, 1, 5, 1572888, 1, 131072, 1572889, 1, 1, 1572890, 1, 131074, 1572891, 1, 65540, 1572892, 1, 65540, 1572893, 1, 131074, 1572894, 1, 65538, 1572899, 1, 196612, 1638416, 1, 131072, 1638417, 1, 131074, 1638418, 1, 1, 1638419, 1, 1, 1638420, 1, 65538, 1638435, 1, 65539, 1703971, 1, 262147, 1769507, 1, 131076, 1835043, 1, 131076, 1900570, 1, 65536, 1900571, 1, 65540, 1900572, 1, 65540, 1900573, 1, 65540, 1900574, 1, 131074, 1900575, 1, 1, 1900576, 1, 131074, 1900577, 1, 1, 1900578, 1, 65540, 1900579, 1, 65538, 1966106, 1, 196612, 2031642, 1, 262147, 2097178, 1, 131076, 2162714, 1, 5, 2228250, 1, 327683 )
+
+[node name="buttens" type="CanvasLayer" parent="."]
+scale = Vector2( 2.5, 2.5 )
+transform = Transform2D( 2.5, 0, 0, 2.5, 0, 0 )
+
+[node name="1" parent="buttens" instance=ExtResource( 2 )]
+anchor_left = 0.0399619
+anchor_top = 0.00227834
+anchor_right = 0.0399619
+anchor_bottom = 0.00227834
+margin_left = 48.2254
+margin_top = 40.9852
+margin_right = 68.2254
+margin_bottom = 60.9852
+level_to_load = "res://Level/level_1.tscn"
+
+[node name="2" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 235.31
+margin_top = 86.1744
+margin_right = 255.31
+margin_bottom = 106.174
+level = 2
+level_to_load = "res://Level/level_2.tscn"
+
+[node name="3" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 316.031
+margin_top = 74.2414
+margin_right = 336.031
+margin_bottom = 94.2414
+level = 3
+level_to_load = "res://Level/level_3.tscn"
+
+[node name="4" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 429.386
+margin_top = 76.8126
+margin_right = 449.386
+margin_bottom = 96.8126
+level = 4
+level_to_load = "res://Level/level_4.tscn"
+
+[node name="5" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 587.603
+margin_top = 106.445
+margin_right = 607.603
+margin_bottom = 126.445
+level = 5
+level_to_load = "res://Level/level_5.tscn"
+
+[node name="6" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 593.337
+margin_top = 187.263
+margin_right = 613.337
+margin_bottom = 207.263
+level = 6
+level_to_load = "res://Level/level_6.tscn"
+
+[node name="7" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 491.051
+margin_top = 170.009
+margin_right = 511.051
+margin_bottom = 190.009
+level = 7
+level_to_load = "res://Level/level_7.tscn"
+
+[node name="8" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 383.079
+margin_top = 216.376
+margin_right = 403.079
+margin_bottom = 236.376
+level = 8
+level_to_load = "res://Level/level_8.tscn"
+
+[node name="9" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 297.154
+margin_top = 172.271
+margin_right = 317.154
+margin_bottom = 192.271
+level = 9
+level_to_load = "res://Level/level_9.tscn"
+
+[node name="10" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 157.696
+margin_top = 221.897
+margin_right = 177.696
+margin_bottom = 241.897
+level = 10
+level_to_load = "res://Level/level_10.tscn"
+
+[node name="11" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 220.327
+margin_top = 298.919
+margin_right = 240.327
+margin_bottom = 318.919
+level = 11
+level_to_load = "res://Level/level_11.tscn"
+
+[node name="12" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 287.194
+margin_top = 345.366
+margin_right = 307.194
+margin_bottom = 365.366
+level = 12
+level_to_load = "res://Level/level_12.tscn"
+
+[node name="13" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 346.226
+margin_top = 298.265
+margin_right = 366.226
+margin_bottom = 318.265
+level = 13
+level_to_load = "res://Level/level_13.tscn"
+
+[node name="14" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 473.298
+margin_top = 330.208
+margin_right = 493.298
+margin_bottom = 350.208
+level = 14
+level_to_load = "res://Level/level_14.tscn"
+
+[node name="15" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 557.251
+margin_top = 355.72
+margin_right = 577.251
+margin_bottom = 375.72
+level = 15
+level_to_load = "res://Level/level_15.tscn"
+
+[node name="16" parent="buttens" instance=ExtResource( 2 )]
+visible = false
+margin_left = 413.136
+margin_top = 410.326
+margin_right = 433.136
+margin_bottom = 430.326
+level = 16
+level_to_load = "res://Level/level_16.tscn"
+
+[node name="Button" parent="buttens" instance=ExtResource( 5 )]
+
+[node name="soundmaker" parent="." instance=ExtResource( 1 )]
+position = Vector2( -160, 224 )
+[connection signal="pressed" from="buttens/Button" to="." method="_on_Button_pressed"]
