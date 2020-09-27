@@ -5,7 +5,7 @@ extends "res://Level/level.gd"
 
 func _ready():
 
-	spawns = [spawn_1,spawn_2,spawn_3,spawn_4]
+	spawns = [spawn_1,spawn_2,spawn_3]
 	air_spawns = [air_spawn_1,air_spawn_2,air_spawn_3,air_spawn_4]
 	turret_spawns = [] 
 	
