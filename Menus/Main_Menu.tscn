@@ -190,9 +190,9 @@ tile_data = PoolIntArray( 1310792, 0, 0, 1900590, 2, 65539, 3997668, 0, 0 )
 
 [node name="options" type="Button" parent="buttens"]
 margin_left = 268.144
-margin_top = 195.746
+margin_top = 244.772
 margin_right = 357.144
-margin_bottom = 215.746
+margin_bottom = 264.772
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -200,9 +200,9 @@ __meta__ = {
 
 [node name="start" type="Button" parent="buttens"]
 margin_left = 266.76
-margin_top = 161.333
+margin_top = 210.359
 margin_right = 356.76
-margin_bottom = 181.333
+margin_bottom = 230.359
 text = "Start Game"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -210,9 +210,9 @@ __meta__ = {
 
 [node name="exit" type="Button" parent="buttens"]
 margin_left = 268.259
-margin_top = 228.8
+margin_top = 277.826
 margin_right = 357.259
-margin_bottom = 248.8
+margin_bottom = 297.826
 text = "Exit Game"
 __meta__ = {
 "_edit_use_anchors_": false
