@@ -7,14 +7,16 @@ script/source = "extends Node2D
 
 onready var levels_beaten = get_node(\"/root/LevelsBeaten\")
 onready var options = get_node(\"/root/option_save\")
+onready var crt = get_node(\"/root/crt/crt\")
 
 func _ready():
 	levels_beaten.loading()
 	options.loading()
-	var full = options.data[\"fullscreen\"]
-	var res = options.data[\"Resolution\"]
-	print(full)
-	print(res)
+	if options.data[\"crt\"] == \"true\": crt.visible = true
+	else: crt.visible  = false
+	
+	if options.data[\"fullscreen\"] == \"true\": OS.window_fullscreen =true
+	else: OS.window_fullscreen= false
 	
 #	OS.window_fullscreen = full
 #	OS.set_window_size(res)
@@ -209,6 +211,7 @@ __meta__ = {
 }
 
 [node name="exit" type="Button" parent="buttens"]
+visible = false
 margin_left = 268.259
 margin_top = 277.826
 margin_right = 357.259

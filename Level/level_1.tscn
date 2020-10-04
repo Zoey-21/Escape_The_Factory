@@ -11,11 +11,11 @@
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 206.895
-margin_top = 21.1539
-margin_right = 466.895
-margin_bottom = 35.1539
-text = "WASD to Move     Mouse to Aim and Fire"
+margin_left = 152.718
+margin_top = 21.7839
+margin_right = 540.718
+margin_bottom = 35.7839
+text = "WASD to Move     Mouse to Aim and Left Click or Shift to Fire"
 __meta__ = {
 "_edit_use_anchors_": false
 }

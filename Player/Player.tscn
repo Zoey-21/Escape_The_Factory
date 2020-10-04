@@ -99,7 +99,7 @@ script = ExtResource( 2 )
 [node name="sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 16 )
 animation = "running"
-frame = 6
+frame = 5
 playing = true
 
 [node name="walk_collision" type="CollisionShape2D" parent="." groups=[
@@ -118,6 +118,10 @@ shape = SubResource( 18 )
 [node name="bullet spawn" type="KinematicBody2D" parent="."]
 script = ExtResource( 3 )
 
+[node name="shoot_timer" type="Timer" parent="bullet spawn"]
+wait_time = 0.25
+one_shot = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bullet spawn"]
 position = Vector2( -0.533043, -4.04447 )
 shape = SubResource( 17 )
@@ -126,4 +130,5 @@ disabled = true
 [node name="invin_timer" type="Timer" parent="."]
 wait_time = 3.0
 [connection signal="body_entered" from="hit_box" to="." method="_on_hit_box_body_entered"]
+[connection signal="timeout" from="bullet spawn/shoot_timer" to="bullet spawn" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="invin_timer" to="." method="_on_invin_timer_timeout"]

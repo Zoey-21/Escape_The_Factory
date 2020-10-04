@@ -6,11 +6,13 @@ var save_path = "user://options.dat"
 var data_default = {
 	"Resolution" : "Vector2(800,600)",
 	"fullscreen" : "false",
+	"crt" : "true",
 	}
 
 var data = {
 	"Resolution" : "Vector2(800,600)",
 	"fullscreen" : "false",
+	"crt" : "true",
 	}
 
 func save():

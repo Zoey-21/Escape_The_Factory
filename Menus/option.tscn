@@ -20,9 +20,9 @@ margin_bottom = 28.8441
 anchor_left = -0.012
 anchor_right = -0.012
 margin_left = 355.84
-margin_top = 276.116
+margin_top = 205.103
 margin_right = 468.84
-margin_bottom = 296.116
+margin_bottom = 225.103
 text = "Delete Save"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -62,6 +62,7 @@ __meta__ = {
 }
 
 [node name="default" type="Button" parent="butten"]
+visible = false
 margin_left = 338.242
 margin_top = 190.4
 margin_right = 451.242
@@ -81,7 +82,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="crt" type="CheckBox" parent="butten"]
+margin_left = 338.242
+margin_top = 137.83
+margin_right = 436.242
+margin_bottom = 161.83
+pressed = true
+text = "CRT Effect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="resolution" type="OptionButton" parent="butten"]
+visible = false
 margin_left = 338.242
 margin_top = 142.4
 margin_right = 463.242
@@ -96,4 +109,5 @@ __meta__ = {
 [connection signal="pressed" from="butten/delete/no" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="butten/default" to="." method="_on_default_pressed"]
 [connection signal="toggled" from="butten/fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="butten/crt" to="." method="_on_crt_toggled"]
 [connection signal="item_selected" from="butten/resolution" to="." method="_on_resolution_item_selected"]

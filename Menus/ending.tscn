@@ -7,7 +7,6 @@
 [ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=5]
 [ext_resource path="res://soundmaker/soundmaker.tscn" type="PackedScene" id=6]
 
-
 [sub_resource type="TileSet" id=1]
 0/name = "industrial.v2.png 0"
 0/texture = ExtResource( 1 )

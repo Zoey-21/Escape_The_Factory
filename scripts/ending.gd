@@ -13,7 +13,7 @@ func text():
 	tie.buff_text("Jim had done it! They had defeated the slime infecting the robots!\n", 0.1)
 	# Buff silence: Duration of the silence (in seconds)
 	tie.buff_silence(5)
-	tie.buff_text("Behind the slime was one of the exit to the factory. \n", 0.1)
+	tie.buff_text("Behind the slime was one of the exits to the factory. \n", 0.1)
 	tie.buff_text("The door slides open and Jim walks out to the outside.\n", 0.1)
 	tie.buff_text("The End!\n", 0.1)
 	tie.buff_text("Congratulations!\n", 0.1)

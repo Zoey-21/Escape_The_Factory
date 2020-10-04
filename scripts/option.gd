@@ -5,8 +5,16 @@ onready var yes = get_node("butten/delete/yes")
 onready var no = get_node("butten/delete/no")
 onready var text = get_node("butten/delete/text")
 onready var options = get_node("/root/option_save")
+onready var crt = get_node("/root/crt/crt")
+
+onready var crt_botten = $butten/crt
+onready var fullscreen_botten = $butten/fullscreen
 
 func _ready():
+	if options.data["crt"] == "true": crt_botten.pressed = true 
+	else: crt_botten.pressed = false
+#	if options.data["fullscreen"] == "true": fullscreen_botten.pressed =true
+#	else: fullscreen_botten.pressed = false
 	$butten/resolution.get_popup().add_item("800x600")
 	$butten/resolution.get_popup().add_item("1024x768")
 	$butten/resolution.get_popup().add_item("1400x1050")
@@ -71,3 +79,12 @@ func _on_fullscreen_toggled(button_pressed):
 
 func _on_default_pressed():
 	options.delete()
+
+
+func _on_crt_toggled(button_pressed):
+	if button_pressed == true:
+		crt.visible = true
+		options.data["crt"] = "true"
+	else:
+		crt.visible = false
+		options.data["crt"] = "false"
