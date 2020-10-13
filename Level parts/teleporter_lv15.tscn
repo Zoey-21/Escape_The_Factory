@@ -3,8 +3,6 @@
 [ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=1]
 [ext_resource path="res://scripts/teleporter_Lv15.gd" type="Script" id=2]
 
-
-
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/industrial.v2.png-7f6ebbb7645cfccd264a6e2f34d81c26.stex"
 

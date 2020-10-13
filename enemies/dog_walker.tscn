@@ -55,7 +55,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 8 )
 animation = "walking"
-frame = 5
+frame = 4
 playing = true
 flip_h = true
 

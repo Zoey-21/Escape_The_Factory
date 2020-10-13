@@ -28,6 +28,8 @@ onready var sixteen = get_node(\"buttens/16\")
 onready var map_2 = get_node(\"Map_Part_2\")
 onready var map_3 = get_node(\"Map_Part_3\")
 
+func _ready():
+	music.play_music(\"res://Resorces/Sounds/music/title.wav\",-5)
 
 
 func _physics_process(_delta):

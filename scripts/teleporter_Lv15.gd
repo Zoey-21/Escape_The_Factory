@@ -32,6 +32,7 @@ func _physics_process(delta):
 
 func _on_StaticBody2D_body_entered(body):
 	if body.is_in_group("Player"):
+		music.start()
 		if $"/root/Global".can_tele == true:
 			match self.name:
 				tele_1.name:

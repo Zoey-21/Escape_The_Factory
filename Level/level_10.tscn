@@ -238,7 +238,7 @@ polygon = PoolVector2Array( 80, 132, 80, 220, 180, 220, 180, 196, 164, 196, 164,
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="darkness" type="TextureRect" parent="CanvasLayer"]
-self_modulate = Color( 1, 1, 1, 0.952941 )
+self_modulate = Color( 1, 1, 1, 0.862745 )
 margin_left = -740.0
 margin_top = -316.0
 margin_right = 2441.0

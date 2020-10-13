@@ -53,7 +53,11 @@ var spawned = 0# amount that has been spawned
 func _ready():
 	global.level_ended = false
 
+
 func _physics_process(_delta):# makes random numbers for spawning
+	if cur_level != 10 and killed < NEED_TO_KILL:
+		music.play_music("res://Resorces/Sounds/music/level.wav",-8)
+		
 	if Input.is_action_pressed("level_exit"):
 		get_tree().change_scene("res://Menus/Level_Menu.tscn")
 		$"/root/Global".level_ended =true
@@ -151,7 +155,8 @@ func spawner(spawn_place):
 
 func level_end():
 
-		
+		music.stop()
+		music.reset()
 		match cur_level:# takes the curent level and health of player and sets true the data holding whether the level has bean beaten and if it was done hitless
 			1:  
 				save("level_1", "level_1_hitless")

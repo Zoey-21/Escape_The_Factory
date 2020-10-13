@@ -10,14 +10,12 @@ func _ready():
 	turret_spawns = [] 
 	
 	
-	NEED_TO_KILL = 20# amount of kills needed to win level
+	NEED_TO_KILL = 15# amount of kills needed to win level
 	spawn_list = [floater_scene,floater_scene,shooter_scene,floater_scene,wait, \
 	
 	dog_walker_scene,floater_scene,dog_walker_scene,wait, \
 	
 	floater_scene,shooter_scene,dog_walker_scene,wait,\
-	
-	shooter_scene,dog_walker_scene,shooter_scene,dog_walker_scene,floater_scene,wait,\
 	
 	floater_scene,dog_walker_scene,floater_scene,shooter_scene,floater_scene,
 	

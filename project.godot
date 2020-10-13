@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="2d shoot"
+config/name="Escape The Factory"
 run/main_scene="res://Menus/Main_Menu.tscn"
 config/icon="res://icon.png"
 
@@ -25,6 +25,7 @@ Global="*res://pre_loaded/Global.gd"
 LevelsBeaten="*res://pre_loaded/levels_beaten.gd"
 option_save="*res://pre_loaded/option_save.gd"
 crt="*res://pre_loaded/crt.tscn"
+music="*res://pre_loaded/music.tscn"
 
 [display]
 

@@ -47,11 +47,10 @@ func _physics_process(delta):
 					NEED_TO_KILL = NEED_TO_KILL + 9
 	if worp == true:
 		stop = true
+		music.save()
 	else:
 		stop = false
 
 func _on_waiting_timeout():
 	if waiting == true:
 		waiting = false
-
-
