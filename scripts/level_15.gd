@@ -13,9 +13,9 @@ func _ready():
 	NEED_TO_KILL = 6# amount of kills needed to win level    dont count turrets   count floater_big_scene twice
 	spawn_list = [dog_walker_scene,wait,dog_walker_scene,dog_walker_scene,wait,dog_walker_scene,dog_walker_scene,dog_walker_scene,wait,
 	
-	floater_scene,floater_scene,floater_scene,floater_big_scene,shooter_scene,floater_big_scene,floater_scene,floater_scene,floater_scene,floater_scene,wait,wait,
+	floater_scene,floater_scene,floater_scene,floater_big_scene,shooter_scene,floater_big_scene,floater_scene,floater_scene,floater_scene,floater_scene,wait,wait,wait,
 	
-	floater_scene,floater_scene,floater_scene,shooter_scene,dog_walker_scene,dog_walker_scene,dog_walker_scene,dog_walker_scene,shooter_scene,wait,wait,
+	floater_scene,floater_scene,floater_scene,shooter_scene,dog_walker_scene,dog_walker_scene,dog_walker_scene,dog_walker_scene,shooter_scene,wait,wait,wait,
 	
 	floater_scene,dog_walker_scene,dog_walker_scene,floater_scene,floater_scene,floater_scene,floater_scene,floater_scene,shooter_scene,wait,wait,wait,
 	

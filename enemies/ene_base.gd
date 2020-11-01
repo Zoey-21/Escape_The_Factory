@@ -23,7 +23,7 @@ func _physics_process(delta):
 			sprite.set_flip_h(false)# dont flip
 	
 	
-	velo.x = cos(angle)#gets velo from angle
+	velo.x = cos(angle)#gets velo from angle 
 	velo.y = sin(angle)
 	if knockback == false:#if not in knockback
 # warning-ignore:return_value_discarded

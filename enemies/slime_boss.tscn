@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Resorces/industrial.v2.png" type="Texture" id=1]
 [ext_resource path="res://enemies/slime.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/slime_boss.gd" type="Script" id=3]
 [ext_resource path="res://scripts/shoot_box_slime.gd" type="Script" id=4]
+[ext_resource path="res://Resorces/Sounds/slime_step_1.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "attack"
@@ -96,7 +97,7 @@ anims/attack = SubResource( 1 )
 position = Vector2( 0, -2.4 )
 frames = SubResource( 12 )
 animation = "attack"
-frame = 5
+frame = 3
 playing = true
 
 [node name="slime" parent="." instance=ExtResource( 2 )]
@@ -241,18 +242,21 @@ script = ExtResource( 4 )
 position = Vector2( -2.98023e-08, 0 )
 shape = SubResource( 13 )
 disabled = true
+
+[node name="sqish" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="attack" to="." method="_on_attack_timeout"]
 [connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_150" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_120" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_90" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_60" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_0" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_180" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_30" method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="shoot_timer" to="shoot_box_210" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shoot_timer" to="shoot_box_300" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shoot_timer" to="shoot_box_330" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_210" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_0" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_30" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_60" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_180" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_120" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_150" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shoot_timer" to="shoot_box_240" method="_on_shoot_timer_timeout"]
 [connection signal="timeout" from="shoot_timer" to="shoot_box_270" method="_on_shoot_timer_timeout"]
-[connection signal="timeout" from="shoot_timer" to="shoot_box_90" method="_on_shoot_timer_timeout"]

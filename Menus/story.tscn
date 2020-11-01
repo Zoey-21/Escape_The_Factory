@@ -175,6 +175,7 @@ format = 1
 tile_data = PoolIntArray( 3997668, 0, 0 )
 
 [node name="one" type="Node2D" parent="."]
+visible = false
 
 [node name="player" type="Sprite" parent="one"]
 position = Vector2( 1080, 472 )
@@ -313,12 +314,12 @@ region_enabled = true
 region_rect = Rect2( -1, 128, 65, 10 )
 
 [node name="two" type="Node2D" parent="."]
-visible = false
 
 [node name="gound" type="Sprite" parent="two"]
-position = Vector2( 320, 80 )
+position = Vector2( 163, 560.738 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 1 )
+offset = Vector2( 15.7, -48.0738 )
 region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
@@ -337,9 +338,10 @@ region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
 [node name="gound4" type="Sprite" parent="two"]
-position = Vector2( 16, 244 )
+position = Vector2( 163, 560.738 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 1 )
+offset = Vector2( -14.7, -31.6738 )
 region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
@@ -358,9 +360,10 @@ region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
 [node name="gound7" type="Sprite" parent="two"]
-position = Vector2( 320, 404 )
+position = Vector2( 163, 560.738 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 1 )
+offset = Vector2( 15.7, -15.6738 )
 region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
@@ -379,9 +382,10 @@ region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
 [node name="gound10" type="Sprite" parent="two"]
-position = Vector2( 12, 564 )
+position = Vector2( 163, 560.738 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 1 )
+offset = Vector2( -15.1, 0.32616 )
 region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
@@ -400,9 +404,50 @@ region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
 [node name="gound13" type="Sprite" parent="two"]
-position = Vector2( 320, 728 )
+position = Vector2( 163, 560.738 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 1 )
+offset = Vector2( 15.7, 16.7262 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 64, 16 )
+
+[node name="gound18" type="Sprite" parent="two"]
+position = Vector2( -479.774, 560.738 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+offset = Vector2( 15.7, -48.0738 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 64, 16 )
+
+[node name="gound19" type="Sprite" parent="two"]
+position = Vector2( -479.774, 560.738 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+offset = Vector2( -14.7, -31.6738 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 64, 16 )
+
+[node name="gound20" type="Sprite" parent="two"]
+position = Vector2( -479.774, 560.738 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+offset = Vector2( 15.7, -15.6738 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 64, 16 )
+
+[node name="gound21" type="Sprite" parent="two"]
+position = Vector2( -479.774, 560.738 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+offset = Vector2( -15.1, 0.32616 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 64, 16 )
+
+[node name="gound22" type="Sprite" parent="two"]
+position = Vector2( -479.774, 560.738 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+offset = Vector2( 15.7, 16.7262 )
 region_enabled = true
 region_rect = Rect2( 192, 0, 64, 16 )
 
